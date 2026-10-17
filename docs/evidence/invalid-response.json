@@ -1,0 +1,1 @@
+{"detail":[{"type":"greater_than","loc":["body","claim_amount"],"msg":"Input should be greater than 0","input":-500,"ctx":{"gt":0.0}}]}

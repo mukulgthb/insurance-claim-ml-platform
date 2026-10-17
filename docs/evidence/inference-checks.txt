@@ -1,0 +1,7 @@
+PASS: Input key order does not change the prediction.
+PASS: Repeated predictions reuse the same Pipeline object.
+PASS: Prediction does not modify the saved artifact.
+PASS: Missing features are rejected.
+Error: Feature mismatch. Missing: ['incident_delay_days', 'policy_tenure_days', 'previous_claims']; extra: []
+
+All inference checks passed.

@@ -1,0 +1,32 @@
+STEP 1: Generate synthetic data
+Rows: 2000
+Features: ['claim_amount', 'policy_tenure_days', 'previous_claims', 'incident_delay_days']
+
+First five synthetic examples:
+ claim_amount  policy_tenure_days  previous_claims  incident_delay_days  requires_manual_review
+ 77621.648807                1159                3                   39                       1
+ 44448.965535                3076                4                   43                       1
+ 86001.194071                 129                3                   16                       1
+ 70039.434877                1630                3                   21                       1
+ 10323.557441                2924                2                   57                       0
+
+STEP 2: Split training and test data
+Training rows: 1600
+Test rows: 400
+
+STEP 3: Fit scaler and classifier
+
+STEP 4: Evaluate on held-out test data
+{
+  "accuracy": 0.8,
+  "roc_auc": 0.8258179857544198,
+  "train_rows": 1600,
+  "test_rows": 400
+}
+
+STEP 5: Save model artifact and metadata
+Model saved: C:\Users\Mukul\Downloads\study_docs\insurance-claims-ml-platform\artifacts\model.joblib
+Metadata saved: C:\Users\Mukul\Downloads\study_docs\insurance-claims-ml-platform\artifacts\metadata.json
+Model size: 2275 bytes
+
+Training completed successfully.

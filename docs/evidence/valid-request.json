@@ -1,0 +1,6 @@
+{
+  "claim_amount": 25000,
+  "policy_tenure_days": 400,
+  "previous_claims": 1,
+  "incident_delay_days": 3
+}
