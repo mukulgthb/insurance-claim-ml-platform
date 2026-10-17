@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    width="1120" height="760" viewBox="0 0 1120 760">
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10"
+      refX="9" refY="5" orient="auto">
+        <path d="M0,0 L10,5 L0,10 Z" fill="#334155"/>
+      </marker>
+    </defs>
+    <rect width="1120" height="760" fill="white"/>
+    <style>
+      text {font-family: Arial, sans-serif; fill:#172033;}
+      .title {font-size:25px; font-weight:bold;}
+      .heading {font-size:18px; font-weight:bold;}
+      .body {font-size:16px;}
+      .small {font-size:14px;}
+      .line {stroke:#334155; stroke-width:2; fill:none;
+             marker-end:url(#arrow);}
+    </style>
+    <text x="40" y="42" class="title">
+      Synthetic Insurance Claims — Phase 0 HLD
+    </text>
+    <text x="40" y="70" class="body">
+      Offline training, startup loading, and request-time inference
+    </text>
+    
+<rect x="40" y="105" width="270" height="105" rx="10" fill="#eef5ff" stroke="#64748b"/>
+<text x="56" y="133" class="heading">Offline training</text>
+<text x="56" y="160" class="body">Synthetic data; split and fit</text>
+<text x="56" y="182" class="body">training/train.py</text>
+<rect x="390" y="105" width="290" height="105" rx="10" fill="#fff7e8" stroke="#64748b"/>
+<text x="406" y="133" class="heading">Trusted model.joblib</text>
+<text x="406" y="160" class="body">Fitted scaler + classifier</text>
+<text x="406" y="182" class="body">Metadata + version label</text>
+<rect x="760" y="105" width="320" height="105" rx="10" fill="#eef5ff" stroke="#64748b"/>
+<text x="776" y="133" class="heading">Startup model loader</text>
+<text x="776" y="160" class="body">Load artifact; check features</text>
+<text x="776" y="182" class="body">Once per application process</text>
+<path d="M310,157 L390,157" class="line"/>
+<path d="M680,157 L760,157" class="line" stroke-dasharray="7 5"/>
+<rect x="285" y="270" width="795" height="185" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6 4"/>
+<text x="305" y="296" class="small">LOCAL FASTAPI SERVICE — 127.0.0.1:8000</text>
+<rect x="40" y="320" width="175" height="100" rx="10" fill="#eef5ff" stroke="#64748b"/>
+<text x="56" y="348" class="heading">API client</text>
+<text x="56" y="375" class="body">curl / Postman</text>
+<text x="56" y="397" class="body">Interactive docs</text>
+<rect x="310" y="320" width="310" height="100" rx="10" fill="#eef5ff" stroke="#64748b"/>
+<text x="326" y="348" class="heading">HTTP prediction endpoint</text>
+<text x="326" y="375" class="body">POST /predict</text>
+<text x="326" y="397" class="body">Pydantic input validation</text>
+<rect x="710" y="320" width="345" height="100" rx="10" fill="#eef5ff" stroke="#64748b"/>
+<text x="726" y="348" class="heading">In-memory Pipeline</text>
+<text x="726" y="375" class="body">Explicit feature ordering</text>
+<text x="726" y="397" class="body">Fitted preprocessing + prediction</text>
+<path d="M215,370 L310,370" class="line"/>
+<path d="M620,370 L710,370" class="line"/>
+<path d="M920,210 L920,320" class="line" stroke-dasharray="7 5"/>
+<rect x="710" y="500" width="345" height="105" rx="10" fill="#eaf8ef" stroke="#64748b"/>
+<text x="726" y="528" class="heading">Prediction response</text>
+<text x="726" y="555" class="body">Decision + probability</text>
+<text x="726" y="577" class="body">Model version</text>
+<path d="M882,420 L882,500" class="line"/>
+<path d="M710,552 L127,552 L127,420" class="line"/>
+<rect x="40" y="635" width="1040" height="95" rx="10" fill="#f5f3ff" stroke="#64748b"/>
+<text x="56" y="663" class="heading">Operational annotations</text>
+<text x="56" y="690" class="body">Validation: before inference; invalid requests return HTTP 422.</text>
+<text x="56" y="712" class="body">Authentication: future API-boundary control. Logging + latency: HTTP middleware.</text>
+<text x="40" y="590" class="small">GET /health reports loaded-model status; it does not run prediction.</text>
+<text x="40" y="615" class="small">Solid arrows: data flow. Dashed arrows: startup loading. Version label is not an immutable registry.</text>
+</svg>

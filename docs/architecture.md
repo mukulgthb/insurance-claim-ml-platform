@@ -1,3 +1,7 @@
+## One-page architecture export
+
+![Phase 0 architecture](evidence/architecture.svg)
+
 # Phase 0 — Synthetic Insurance Claims Model-Serving Platform
 
 ## High-level architecture
