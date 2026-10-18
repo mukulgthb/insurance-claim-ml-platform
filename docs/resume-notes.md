@@ -28,15 +28,4 @@
 - Have request/response evidence files been captured?
 - Does /docs open?
 
-## Remaining assignment work
 
-- Automated API tests.
-- Architecture diagram.
-- 200–300-word design explanation.
-- Sanitized current-workflow discovery.
-- Self-assessment with two real support situations.
-- Three job-description comparisons.
-- Two-minute walkthrough.
-- Complete README.
-- Review Git contents and publish repository.
-- Clean-checkout reproduction.
