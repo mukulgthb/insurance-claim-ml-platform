@@ -1,0 +1,20 @@
+INFO:     Started server process [5714]
+INFO:     Waiting for application startup.
+INFO:claims-api:Loading model artifact
+INFO:claims-api:Model loaded successfully: version=synthetic-claims-v1
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:claims-api:method=GET path=/health status=200 duration_ms=1.427
+INFO:     127.0.0.1:51688 - "GET /health HTTP/1.1" 200 OK
+INFO:claims-api:method=POST path=/predict status=200 duration_ms=19.648
+INFO:     127.0.0.1:51698 - "POST /predict HTTP/1.1" 200 OK
+INFO:claims-api:method=POST path=/predict status=422 duration_ms=0.751
+INFO:     127.0.0.1:51712 - "POST /predict HTTP/1.1" 422 Unprocessable Content
+INFO:     Started server process [6860]
+INFO:     Waiting for application startup.
+INFO:claims-api:Loading model artifact
+INFO:claims-api:Model loaded successfully: version=synthetic-claims-v1
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:claims-api:method=GET path=/health status=200 duration_ms=1.443
+INFO:     127.0.0.1:50500 - "GET /health HTTP/1.1" 200 OK

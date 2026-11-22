@@ -1,0 +1,42 @@
+=== Healthy baseline ===
+2026-11-22T05:54:36+00:00
+=== Process ===
+ubuntu      5714  2.8 19.2 447760 178644 pts/0   Sl+  05:53   0:01 python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
+=== Listening socket ===
+LISTEN 0      2048       127.0.0.1:8000      0.0.0.0:*    users:(("python",pid=5714,fd=7))
+=== Health ===
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     73 100     73   0      0   3085      0                              0100     73 100     73   0      0   3075      0                              0100     73 100     73   0      0   3066      0                              0
+HTTP/1.1 200 OK
+date: Sun, 22 Nov 2026 05:54:36 GMT
+server: uvicorn
+content-length: 73
+content-type: application/json
+x-process-time-ms: 1.427
+
+{"status":"ok","model_loaded":true,"model_version":"synthetic-claims-v1"}
+=== Prediction ===
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100    202 100    111 100     91   5148   4220                              0100    202 100    111 100     91   5129   4205                              0100    202 100    111 100     91   5114   4193                              0
+HTTP/1.1 200 OK
+date: Sun, 22 Nov 2026 05:54:36 GMT
+server: uvicorn
+content-length: 111
+content-type: application/json
+x-process-time-ms: 19.648
+
+{"model_version":"synthetic-claims-v1","requires_manual_review":false,"review_probability":0.22495275931932213}
+=== Missing-field validation ===
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100    233 100    163 100     70  63153  27121                              0100    233 100    163 100     70  61324  26335                              0100    233 100    163 100     70  59860  25706                              0
+HTTP/1.1 422 Unprocessable Content
+date: Sun, 22 Nov 2026 05:54:36 GMT
+server: uvicorn
+content-length: 163
+content-type: application/json
+x-process-time-ms: 0.751
+
+{"detail":[{"type":"missing","loc":["body","claim_amount"],"msg":"Field required","input":{"policy_tenure_days":400,"previous_claims":1,"incident_delay_days":3}}]}

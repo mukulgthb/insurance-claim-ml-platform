@@ -1,0 +1,16 @@
+=== Controlled incident: API process stopped ===
+2026-11-22T05:55:58+00:00
+=== Original symptom ===
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0*   Trying 127.0.0.1:8000...
+* connect to 127.0.0.1 port 8000 from 127.0.0.1 port 57788 failed: Connection refused
+* Failed to connect to 127.0.0.1 port 8000 after 0 ms: Could not connect to server
+
+* closing connection #0
+curl: (7) Failed to connect to 127.0.0.1 port 8000 after 0 ms: Could not connect to server
+curl_exit_code=7
+=== Process check ===
+No matching Uvicorn process
+=== Listener check ===
+State Recv-Q Send-Q Local Address:Port Peer Address:PortProcess

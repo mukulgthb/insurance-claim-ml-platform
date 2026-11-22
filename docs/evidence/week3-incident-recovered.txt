@@ -1,0 +1,19 @@
+=== Recovery verification ===
+2026-11-22T05:56:38+00:00
+=== Process check ===
+ubuntu      6860 10.9 19.2 447776 178656 pts/0   Sl+  05:56   0:01 python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
+=== Listener check ===
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                          
+LISTEN 0      2048       127.0.0.1:8000      0.0.0.0:*    users:(("python",pid=6860,fd=7))
+=== Original symptom retest ===
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     73 100     73   0      0   4760      0                              0100     73 100     73   0      0   4724      0                              0100     73 100     73   0      0   4704      0                              0
+HTTP/1.1 200 OK
+date: Sun, 22 Nov 2026 05:56:37 GMT
+server: uvicorn
+content-length: 73
+content-type: application/json
+x-process-time-ms: 1.443
+
+{"status":"ok","model_loaded":true,"model_version":"synthetic-claims-v1"}
